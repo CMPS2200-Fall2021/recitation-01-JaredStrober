@@ -54,20 +54,17 @@ We'll compare the running times of `linear_search` and `binary_search` empirical
     3. Write at least two additional test cases in `test_binary_search` and confirm they pass.
 
 - [ ] 
-    4. Describe the worst case input value of `key` for `linear_search`? for `binary_search`?
+    4. Describe the worst case input value of `key` for `linear_search`? for `binary_search`? 
+       For linear search and binary search, the worst case input is if the value of array is not in the array.  
+       It would have to search the entire array before returning -1.  
+       If the key is in the array, the worst case for linear search is if the key is at the very end of the array.  
+       The worst case for binary search would be if the key is either the first or last element in the array.
 
-For linear_search and binary_search the worst case input is if the value of key is not in the array. This is because it
-would need to search through the entire array before not finding the element and returning -1.
-
-If the key is in the array, then the worst case for linear_search would be if the key was stored at the very end of the
-array. If the key is in the array for binary_search, then the worst case input would be if the key is stored in the
-middle of one of the two bisects.
 
 - [ ] 
     5. Describe the best case input value of `key` for `linear_search`? for `binary_search`?
 
-Best case input value for linear_search is if the value is at the 0th index. For binary_search it would be at the
-midpoint.
+ For linear search, the best case is if the key is the first element of the array.  For binary search, it is if the key is the midpoint. 
 
 - [ ] 
     6. Complete the `time_search` function to compute the running time of a search function. Note that this is an
@@ -108,7 +105,7 @@ points are not steadily increasing. It goes from .004 -> .002 -> .006 -> .007 ev
       
     + For binary search? 
     
-    Theta(n^2) + O(log_2(n)) = O(n^2). You need to first sort the entire list and then still search through the bisection list to find the element.
+    Theta(n^2) + K * O(log_2(n)) = O(n^2). You need to first sort the entire list and then still search through the bisection list to find the element.
       
     + For what values of $k$ is it more efficient to first sort and than use binary search versus just using linear
       search without sorting?
